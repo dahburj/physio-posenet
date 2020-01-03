@@ -13,13 +13,13 @@ __backend/physio-backend__ - the code for the application backend (Python)
 ##### Build the docker image
 ```
 cd physio-posenet
-docker build -t physioarkathon/physio-backend:0.1.0 .
-docker push physioarkathon/physio-backend:0.1.0
+docker build -t dahburj/physio-backend:2.0 .
+docker push dahburj/physio-backend:2.0
 ```
 
 ##### Run the app
 ```
-docker pull physioarkathon/physio-backend:0.1.0
+docker pull dahburj/physio-backend:2.0
 docker-compose up -d
 ```
 

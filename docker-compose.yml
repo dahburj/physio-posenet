@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   httpd:
-    image: docker.sqooba.io/sqooba/httpd-for-sandboxes:latest
+    image: httpd:latest
     ports:
     - "443:443"
     networks:
@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
 
   backend:
-    image: physioarkathon/physio-backend:0.1.0
+    image: dahburj/physio-backend:0.1.0
     ports:
     - "8080"
     networks:

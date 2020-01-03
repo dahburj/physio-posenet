@@ -16,6 +16,6 @@ ADD frontend/arkathon-frontend/dist/arkathon-frontend /usr/src/app/static
 
 EXPOSE 8080
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["python"]
 
 CMD ["-m", "swagger_server"]
