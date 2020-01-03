@@ -1,11 +1,12 @@
-FROM python:3
+FROM python:3.6
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY backend/physio-backend/requirements.txt /usr/src/app/
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.0-py3-none-any.whl
 
 COPY backend/physio-backend /usr/src/app
 
